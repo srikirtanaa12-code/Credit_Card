@@ -1,9 +1,11 @@
-Credit Card Default Dataset
+CREDIT CARD DEFAULT DATASET
+
 1. Dataset Description
 The Credit Card Default dataset contains information about credit card
 clients, including demographic details, credit limits, repayment status,
 bill amounts and previous payment amounts. It also records whether a
 client defaulted on their payment in the following month.
+
 2. Dataset Information
 - File name: default of credit card clients.xls
 - Number of records: 30,000
@@ -13,11 +15,13 @@ client defaulted on their payment in the following month.
 - File format: Excel (.xls)
 - Missing values: No missing values were found in the inspected
   data rows after identifying the first row as the column headings.
+
 3. Objective
 The main objective of this dataset is to analyse customer credit
 information and identify patterns associated with credit card payment
 defaults. It can be used to develop machine learning models that predict
 whether a client is likely to default on the next month's payment.
+
 4. Features Description
   Feature                             Description
   ID                                Identification number of each
@@ -75,16 +79,19 @@ dollars)
 default payment next month        Indicates whether the client
 defaulted next month (target
 variable)
+
 5. Target Variable
 The target variable is default payment next month. - 0 -- No
 default - 1 -- Default
 
 In the inspected dataset, 23,364 records have a target value of 0 and
 6,636 records have a target value of 1.
+
 6. Dataset Structure
 The dataset contains 30,000 client records and 25 columns, including the
 client ID, 23 explanatory features and the target variable. Each row
 represents one credit card client.
+
 7. Possible Applications
 - Exploratory Data Analysis (EDA)
 - Customer credit behaviour analysis
@@ -92,6 +99,7 @@ represents one credit card client.
 - Data visualisation
 - Classification using machine learning
 - Credit card default prediction
+
 8. Data Preprocessing
 The first row in the supplied Excel file contains the actual column
 names. When loading the file, use the first row as the header and remove
@@ -103,12 +111,13 @@ import pandas as pd
 
 df = pd.read_excel("default of credit card clients.xls", header=1)
 
-# Separate the target variable
+* Separate the target variable
 X = df.drop(columns=["ID", "default payment next month"])
 y = df["default payment next month"]
 Check category codes, data types, class distribution and feature
 relationships before modelling. The PAY_0 name is retained as it
 appears in the dataset.
+
 9. Conclusion
 The Credit Card Default dataset is useful for analysing customer
 repayment behaviour and studying factors related to credit risk. It
